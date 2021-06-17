@@ -1,0 +1,14 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~
+INDEX PAGE 
+~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.index-pg {
+	main {
+		padding: 72px 0 170px;
+	}
+
+	@include table {
+		main {
+			padding: 0 0 130px;
+		}
+	}
+}

@@ -1,0 +1,30 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~
+VARIABLES
+~~~~~~~~~~~~~~~~~~~~~~~~~*/
+$color-primary: #0749AA;
+$basick-white: #fff;
+
+:root {
+	/*font-family*/
+	--fm-1: "Roboto Condensed", sans-serif;
+
+	/*colors*/
+	--basic-black: #000;
+	--basick-dark: #333;
+	--basick-white: #fff;
+	
+	--color-primary: #{$color-primary};
+}
+
+//breakpoints
+$desctop: 1920;
+$desctop-mid: 1450;
+$desctop-min: 1220;
+$table: 1024;
+$mobile: 768;
+$tel: 480;
+
+
+/***********************Main*/
+$duration: 0.3s;
+
