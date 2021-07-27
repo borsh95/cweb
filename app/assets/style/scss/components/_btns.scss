@@ -7,13 +7,14 @@ COMMON BUTTON
 	align-items: center;
 	justify-content: center;
 	padding: 0 16px;
+	text-align: center;
 }
 
 .btn {
 	--height: 50px;
 	--fz: 18px;
 	--colorText: var(--basick-white);
-	--mainColor: var(--color-primary);
+	--colorTone: var(--color-primary);
 	@extend %base;
 
 	height: var(--height);
@@ -21,32 +22,92 @@ COMMON BUTTON
 	font-size: var(--fz);
 	color: var(--colorText);
 	box-shadow: 0px 0px 10px rgba($color-primary, 0.4);
-	background-color: var(--mainColor);
-	border: 3px solid var(--mainColor);
+	background-color: var(--colorTone);
+	border: 3px solid var(--colorTone);
 	border-radius: calc(var(--height) / 2);
 	transition: all $duration;
 
+	&.active,
 	&:hover {
-		color: var(--color-primary);
+		--colorText: var(--color-primary);
 		background-color: transparent;
 	}
 
 	&--secondary {
-		--mainColor: var(--basick-white);
+		--colorTone: var(--basick-white);
 		--colorText: var(--color-primary);
-		border: none;
+		border-color: var(--colorTone);
 
+		&.active,
 		&:hover {
-			color: var(--basick-white);
-			background-color: var(--color-primary);
+			--colorTone: var(--color-primary);
+			--colorText: var(--basick-white);
+			background-color: var(--colorTone);
 		}
+	}
+}
+
+.btn-text {
+	@extend %base;
+	padding: 0;
+	font-weight: 700;
+	color: var(--color-primary);
+	white-space: nowrap;
+	transition: color $duration;
+
+	&:hover {
+		color: var(--basick-dark);
+
+		svg {
+			fill: var(--basick-dark);
+		}
+	}
+
+	svg {
+		flex-shrink: 0;
+		display: inline-block;
+		margin-left: getEm(15, 16);
+		width: getEm(19, 16);
+		height: getEm(19, 16);
+		color: var(--basick-white);
+		fill: var(--color-primary);
+		transition: fill $duration, color $duration;
 	}
 }
 
 .slider-arr {
 	@extend %base;
 
+	padding: 10px;
+	box-sizing: content-box;
+	position: absolute;
+	top: 50%;
+	width: 23px;
+	height: 44px;
+	transform: translateY(-50%);
+
+	&:hover {
+		svg {
+			fill: var(--color-primary);
+		}
+	}
+
+	&--prev {
+		left: -10px;
+	}
+	
+	&--next {
+		right: -10px;
+	}
+
+	svg {
+		fill: #C4C5C7;
+		transition: fill $duration;
+	}
+
 	&--circ {
+		box-sizing: border-box;
+		padding: 0;
 		width: 73px;
 		height: 73px;
 		background-color: var(--basick-white);
@@ -55,11 +116,11 @@ COMMON BUTTON
 		transition: all $duration;
 
 		&.slider-arr--prev svg {
-			margin-left: -15%;
+			margin-left: -5%;
 		}
 		
 		&.slider-arr--next svg {
-			margin-left: 12%;
+			margin-left: 5%;
 		}
 
 		&:hover {
@@ -69,6 +130,7 @@ COMMON BUTTON
 		svg {
 			width: 43%;
 			height: 45%;
+			fill: var(--color-primary);
 		}
 	}
 

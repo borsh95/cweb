@@ -37,3 +37,89 @@
 .color-primary {
 	color: var(--color-primary);
 }
+
+.b-list {
+	--air-l: 30px;
+	--air-b: 30px;
+	--widthCol: 33.3333%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 0 calc(var(--air-b) * -1) calc(var(--air-l) * -1);
+	
+	&__col {
+		margin: 0 0 var(--air-b) var(--air-l);
+		width: calc(var(--widthCol) - var(--air-l));
+	}
+}
+
+%col {
+	display: block;
+}
+
+.b-row {
+	--air-l: 15px;
+	--air-r: 15px;
+	--air-b: 30px;
+
+	@extend .flex-wrap;
+	margin-left: calc(var(--air-l) * -1);
+	margin-right: calc(var(--air-r) * -1);
+	margin-bottom: calc(var(--air-b) * -1);
+
+	[class^="col-"] {
+		padding-left: var(--air-l);
+		padding-right: var(--air-r);
+		padding-bottom: var(--air-b);
+	}
+
+	@include mobile {
+		--air-l: 10px;
+		--air-r: 10px;
+	}
+}
+
+.obj-fit-cover {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+@for $i from 1 through 12 {
+	.col-d-#{$i} { 
+		width: calc(100% / 12 * #{$i});
+	}
+}
+
+@include desctop-min {
+	@for $i from 1 through 12 {
+		.col-dm-#{$i} { 
+			width: calc(100% / 12 * #{$i});
+		}
+	}
+}
+
+@include table {
+	@for $i from 1 through 12 {
+		.col-tab-#{$i} { 
+			width: calc(100% / 12 * #{$i});
+		}
+	}
+}
+
+@include mobile {
+	@for $i from 1 through 12 {
+		.col-mob-#{$i} { 
+			width: calc(100% / 12 * #{$i});
+		}
+	}
+}
+
+@include tel {
+	@for $i from 1 through 12 {
+		.col-tel-#{$i} { 
+			width: calc(100% / 12 * #{$i});
+		}
+	}
+}

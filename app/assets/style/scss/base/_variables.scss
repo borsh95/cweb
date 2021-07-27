@@ -1,6 +1,7 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~
 VARIABLES
 ~~~~~~~~~~~~~~~~~~~~~~~~~*/
+$hue-color: 216;
 $color-primary: #0749AA;
 $basick-white: #fff;
 
@@ -12,15 +13,21 @@ $basick-white: #fff;
 	--basic-black: #000;
 	--basick-dark: #333;
 	--basick-white: #fff;
+	--basick-red: #F44336;
 	
 	--color-primary: #{$color-primary};
+	--color-primary-hsl: hsl(#{$hue-color}, 92%, 35%);
+
+	--scroll-bar-color: hsl(#{$hue-color}, 42%, 90%);
+    --scroll-thumb-color: hsl(#{$hue-color}, 42%, 70%);
+	--scroll-thumb-color-hover: hsl(#{$hue-color}, 42%, 60%);
 }
 
 //breakpoints
 $desctop: 1920;
 $desctop-mid: 1450;
 $desctop-min: 1220;
-$table: 1024;
+$table: 1070;
 $mobile: 768;
 $tel: 480;
 

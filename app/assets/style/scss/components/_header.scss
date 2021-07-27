@@ -4,8 +4,58 @@ HEADER
 header {
 	position: relative;
 	padding: 14px 0 0;
-	background-color: var(--back-white);
+	background-color: #fcfcfc;
 	box-shadow: 0px 0px 20px rgba(48, 130, 255, 0.5);
+
+	&.fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+		padding: 5px 0 0;
+		width: 100%;
+		background-color: var(--basick-white);
+		box-shadow: 0 5px 21px rgba(0, 0, 0, 0.16);
+		animation: anim 0.5s; 
+		z-index: 50;
+
+		.header {
+			&__top {
+				display: none;
+			}
+
+			&__logo {
+				font-size: 33px;
+			}
+
+			@include table {
+				@at-root header.fixed {
+					padding: 15px 0;
+				}
+				&__top {
+					display: flex;
+				}
+
+				&__logo {
+					font-size: 35px;
+				}
+			}
+
+			@include mobile {
+				&__logo {
+					font-size: 24px;
+				}
+			}
+		}
+
+		@keyframes anim {
+			from {
+				transform: translateY(-100%);
+			}
+			to {
+				transform: translateY(0);
+			}
+		}
+	}
 
 	@include table {
 		padding: 25px 0;
@@ -146,7 +196,8 @@ header {
 /*menu*/
 .menu {
 	$this: &;
-
+	color: var(--basick-dark);
+	
 	@media (min-width: #{$table + 1}px) {
 		position: relative;
 		z-index: 1;
@@ -183,7 +234,8 @@ header {
 			left: 0;
 		}
 
-		& > li > a {
+		& > li > a,
+		& > li > span {
 			white-space: nowrap;
 		}
 
@@ -199,7 +251,8 @@ header {
 			left: 100%;
 		}
 
-		ul a {
+		ul a,
+		ul li > span {
 			display: flex;
 			padding: 15px 20px 15px 28px;
 			font-size: 16px;
@@ -210,15 +263,20 @@ header {
 		}
 
 		ul li:hover {
-			background-color: var(--color-primary);
+			background-color: var(--color-primary) !important;
 
-			& > a {
+			& > a,
+			& > span {
 				color: var(--basick-white);
 
 				svg {
 					fill: var(--basick-white);
 				}
 			}
+		}
+
+		ul li.active {
+			background-color: lighten($color-primary, 62%);
 		}
 
 		&__item {
@@ -232,16 +290,21 @@ header {
 				margin-right: 0;
 			}
 
-			&:hover .menu__link {
-				color: var(--color-primary);
-				text-shadow: 0.1px 0.1px 0 var(--color-primary),
-							-0.1px -0.1px 0 var(--color-primary);
+			&:hover,
+			&.active {
+				.menu__link {
+					color: var(--color-primary);
+					text-shadow: 0.1px 0.1px 0 var(--color-primary),
+								-0.1px -0.1px 0 var(--color-primary);
+				}
 			}
 		}
 
 		&__item--nesting {
-			& > a {
+			& > a,
+			& > span {
 				position: relative;
+				display: inline-flex;
 				padding-right: 29px;
 
 				#{$this}__item-arr {
@@ -298,7 +361,8 @@ header {
 			}
 		}
 	
-		& > ul > li > a {
+		& > ul > li > a, 
+		& > ul > li > span {
 			padding: 15px 20px 15px 23px;
 			font-weight: 700;
 			font-size: 18px;
@@ -321,6 +385,11 @@ header {
 			margin-top: -2px;
 			width: 25px;
 			height: 20px;
+		}
+
+		&__toggle.active + .menu__link {
+			color: var(--color-primary);
+    		text-shadow: 0.1px 0.1px 0 var(--color-primary), -0.1px -0.1px 0 var(--color-primary);
 		}
 	
 		&__link {

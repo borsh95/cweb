@@ -1,0 +1,110 @@
+/*==================== PRODIVISION PAGE ====================*/
+.prodivision-pg {
+	.services-b {
+		padding: 103px 0 0;
+	}
+
+	.stages-b  {
+		padding: 130px 0 0;
+
+		.b-tabs {
+			&__content {
+				font-weight: 300;
+				line-height: (19/16);
+			}
+		}
+	}
+
+	.band-slider-b {
+		padding: 120px 0 0;
+	}
+
+	.cases-b {
+		padding: 115px 0 0;
+	}
+
+	.clients-b {
+		padding: 120px 0 0;
+	}
+
+	.reviews-slider-b {
+		padding: 120px 0 0;
+	}
+
+	.faq-b,
+	.blog-b,
+	.application-b {
+		padding: 145px 0 0;
+	}
+
+
+	@include desctop-min {
+		.services-b {
+			padding: 80px 0 0;
+		}
+		
+		.stages-b  {
+			padding: 100px 0 0;
+		}
+
+		.cases-b {
+			padding: 80px 0 0;
+		}
+
+		.reviews-slider-b {
+			padding: 90px 0 0;
+		}
+
+		.prices-b {
+			padding: 90px 0 0;
+		}
+
+		.faq-b,
+		.blog-b,
+		.application-b {
+			padding: 100px 0 0;
+		}
+	}
+
+	@include table {
+		.content-wrap {
+			padding-top: 0;
+		}
+	}
+
+	@include mobile {
+		.services-b {
+			padding: 47px 0 0;
+		}
+
+		.stages-b  {
+			padding: 80px 0 0;
+		}
+
+		.band-slider-b {
+			padding: 105px 0 0;
+		}
+
+		.cases-b {
+			padding: 50px 0 0;
+		}
+
+		.clients-b {
+			padding: 90px 0 0;
+		}
+
+		.reviews-slider-b {
+			padding: 75px 0 0;
+		}
+
+		.prices-b {
+			padding: 67px 0 0;
+		}
+
+		.faq-b,
+		.blog-b,
+		.application-b {
+			padding: 80px 0 0;
+		}
+	}
+}

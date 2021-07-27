@@ -12,6 +12,7 @@
   "devDependencies": {
     "browser-sync": "^2.26.13",
     "del": "^6.0.0",
+    "fslightbox": "^3.2.3",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
@@ -22,6 +23,9 @@
     "gulp-uglify-es": "^2.0.0"
   },
   "dependencies": {
-    "gulp-sourcemaps": "^3.0.0"
+    "gulp-sourcemaps": "^3.0.0",
+    "jquery": "^3.6.0",
+    "jquery.event.move": "^1.3.6",
+    "lightbox2": "^2.11.3"
   }
 }

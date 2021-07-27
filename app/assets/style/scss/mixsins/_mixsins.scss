@@ -47,3 +47,7 @@
 @function getEm($childSize, $parentSize) {
 	@return #{$childSize/$parentSize}em;
 }	
+
+@function getPr($childSize, $parentSize) {
+	@return #{$childSize/$parentSize*100%};
+}	
