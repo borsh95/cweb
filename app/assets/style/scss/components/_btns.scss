@@ -75,6 +75,20 @@ COMMON BUTTON
 	}
 }
 
+.btn-arr {
+	--border-color: var(--color-primary);
+	width: 35px;
+	height: 35px;	
+	color: var(--basick-white);
+	fill: var(--color-primary);
+	transition: all $duration;
+
+	&:hover {
+		color: var(--color-primary);
+		fill: var(--basick-white);
+	}
+}
+
 .slider-arr {
 	@extend %base;
 
@@ -139,5 +153,18 @@ COMMON BUTTON
 			width: 60px;
 			height: 60px;
 		}
+	}
+}
+
+.btn-hash {
+	@extend %base;
+	height: 35px;
+	min-width: 143px;
+	background-color: #f1f1f1;
+	border-radius: 100px;
+	transition: background-color $duration;
+	
+	&:hover {
+		background-color: darken(#f1f1f1, 7%);
 	}
 }

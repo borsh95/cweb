@@ -14,7 +14,69 @@
 </head>
 
 <body>
-
+	<div class="v-modal">
+		<div class="v-modal__inner">
+			<form action="#">
+				<button class="v-modal__close" data-button-type="closeModal" type="button"
+					aria-label="Закрыть окно"></button>
+				<h5 class="title">
+					начать работу :)
+				</h5>
+				<div class="b-input">
+					<div class="b-input__input">
+						<input type="text" name="username" placeholder=" ">
+						<div class="b-input__placeholder">Имя <span>*</span></div>
+						<div class="b-input__ic">
+							<svg>
+								<use href="./assets/img/icons/sprite.svg#input-user-ic"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div class="b-input">
+					<div class="b-input__input">
+						<input type="tel" name="tel" placeholder=" ">
+						<div class="b-input__placeholder">Телефон <span>*</span></div>
+						<div class="b-input__ic">
+							<svg>
+								<use href="./assets/img/icons/sprite.svg#input-tel-ic"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div class="b-input">
+					<div class="b-input__input">
+						<input type="email" name="emain" placeholder=" ">
+						<div class="b-input__placeholder">E-mail <span>*</span></div>
+						<div class="b-input__ic">
+							<svg>
+								<use href="./assets/img/icons/sprite.svg#input-mail-ic"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div class="b-input">
+					<div class="b-input__input">
+						<input type="url" name="url-site" placeholder=" ">
+						<div class="b-input__placeholder">Сайт <span style="color: #A9ABAE;">(необязательно)</span>
+						</div>
+						<div class="b-input__ic">
+							<svg>
+								<use href="./assets/img/icons/sprite.svg#input-build-ic"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div class="b-input">
+					<div class="b-input__input">
+						<input type="text" name="message" placeholder=" ">
+						<div class="b-input__placeholder">Сообщение</div>
+					</div>
+				</div>
+				<button class="btn btn--type-2" type="submit">Отправить</button>
+			</form>
+		</div>
+	</div>
 	<div class="global-wrap index-pg">
 		<!-- HEADER -->
 		<header>
@@ -76,163 +138,165 @@
 						</div>
 					</div>
 					<div class="header__bottom">
-						<!-- navigation -->
-						<nav class="header__nav">
-							<ul class="menu">
-								<li class="menu__item menu-drop">
-									<button class="menu-drop__toggle hamburger" type="button"
-										aria-label="Открыть подменю">
-										<span></span>
-									</button>
-									<a class="menu__link" href="#"><span>УСЛУГИ</span></a>
-									<ul class="menu-drop__list menu__submenu">
-										<li class="menu-drop__item">
-											<a class="menu-drop__link" href="#">
-												<span>seo&nbsp;-&nbsp;продвижение</span>
-												<span class="menu-drop__arr">
-													<svg>
-														<use
-															href="./assets/img/headerAndFooter/sprite.svg#menu-drop-arr">
-														</use>
-													</svg>
-												</span>
-											</a>
-											<ul>
-												<li class="menu-drop__item">
-													<a href="#"><span>Продвижение в Яндексе</span></a>
-												</li>
-												<li>
-													<a href="#"><span>Продвижение в google</span></a>
-												</li>
-												<li>
-													<a href="#"><span>комплексное продвижение</span></a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu-drop__item">
-											<a class="menu-drop__link" href="#">
-												<span>Разработка сайтов</span>
-												<span class="menu-drop__arr">
-													<svg>
-														<use
-															href="./assets/img/headerAndFooter/sprite.svg#menu-drop-arr">
-														</use>
-													</svg>
-												</span>
-											</a>
-											<ul>
-												<li>
-													<a href="#"><span>landing page</span></a>
-												</li>
-												<li>
-													<a href="#"><span>интернет-магазин</span></a>
-												</li>
-												<li>
-													<a href="#"><span>сайт на мodx</span></a>
-												</li>
-												<li>
-													<a href="#"><span>перенос на другую cms</span></a>
-												</li>
-												<li>
-													<a href="#"><span>сайт услуги</span></a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu-drop__item">
-											<a class="menu-drop__link" href="#">
-												<span>Таргетированная реклама</span>
-												<span class="menu-drop__arr">
-													<svg>
-														<use
-															href="./assets/img/headerAndFooter/sprite.svg#menu-drop-arr">
-														</use>
-													</svg>
-												</span>
-											</a>
-											<ul>
-												<li>
-													<a href="#"><span>instagram</span></a>
-												</li>
-												<li>
-													<a href="#"><span>vk</span></a>
-												</li>
-												<li>
-													<a href="#"><span>facebook</span></a>
-												</li>
-												<li>
-													<a href="#"><span>одноклассники</span></a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu-drop__item">
-											<a class="menu-drop__link" href="#">
-												<span>Контекстная реклама</span>
-												<span class="menu-drop__arr">
-													<svg>
-														<use
-															href="./assets/img/headerAndFooter/sprite.svg#menu-drop-arr">
-														</use>
-													</svg>
-												</span>
-											</a>
-											<ul>
-												<li>
-													<a href="#"><span>настройка веб-аналитики</span></a>
-												</li>
-												<li>
-													<a href="#"><span>пополнение рекламнных кабинетов</span></a>
-												</li>
-												<li>
-													<a href="#"><span>настройка google merchant centre</span></a>
-												</li>
-												<li>
-													<a href="#"><span>Настройкай яндекс директ</span></a>
-												</li>
-												<li>
-													<a href="#"><span>настройка google рекламы</span></a>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li class="menu__item">
-									<a class="menu__link" href="#"><span>наши работы</span></a>
-								</li>
-								<li class="menu__item menu__item--nesting">
-									<a class="menu__link" href="#">
-										<span>студия</span>
-										<span class="menu__item-arr">
-											<svg>
-												<use href="./assets/img/headerAndFooter/sprite.svg#arr-down"></use>
-											</svg>
-										</span>
-									</a>
-									<ul>
-										<li>
-											<a href="#"><span>landing page</span></a>
-										</li>
-										<li>
-											<a href="#"><span>интернет-магазин</span></a>
-										</li>
-										<li>
-											<a href="#"><span>сайт на мodx</span></a>
-										</li>
-										<li>
-											<a href="#"><span>перенос на другую cms</span></a>
-										</li>
-										<li>
-											<a href="#"><span>сайт услуги</span></a>
-										</li>
-									</ul>
-								</li>
-								<li class="menu__item">
-									<a class="menu__link" href="#"><span>блог</span></a>
-								</li>
-								<li class="menu__item">
-									<a class="menu__link" href="#"><span>контакты</span></a>
-								</li>
-							</ul>
-						</nav>
+						<div class="burger-b">
+							<!-- navigation -->
+							<nav class="header__nav">
+								<ul class="menu">
+									<li class="menu__item menu-drop">
+										<button class="menu-drop__toggle hamburger" type="button"
+											aria-label="Открыть подменю">
+											<span></span>
+										</button>
+										<a class="menu__link" href="#"><span>УСЛУГИ</span></a>
+										<ul class="menu-drop__list menu__submenu">
+											<li class="menu-drop__item">
+												<a class="menu-drop__link" href="#">
+													<span>seo&nbsp;-&nbsp;продвижение</span>
+													<span class="menu-drop__arr">
+														<svg>
+															<use
+																href="./assets/img/headerAndFooter/sprite.svg#menu-drop-arr">
+															</use>
+														</svg>
+													</span>
+												</a>
+												<ul>
+													<li class="menu-drop__item">
+														<a href="#"><span>Продвижение в Яндексе</span></a>
+													</li>
+													<li>
+														<a href="#"><span>Продвижение в google</span></a>
+													</li>
+													<li>
+														<a href="#"><span>комплексное продвижение</span></a>
+													</li>
+												</ul>
+											</li>
+											<li class="menu-drop__item">
+												<a class="menu-drop__link" href="#">
+													<span>Разработка сайтов</span>
+													<span class="menu-drop__arr">
+														<svg>
+															<use
+																href="./assets/img/headerAndFooter/sprite.svg#menu-drop-arr">
+															</use>
+														</svg>
+													</span>
+												</a>
+												<ul>
+													<li>
+														<a href="#"><span>landing page</span></a>
+													</li>
+													<li>
+														<a href="#"><span>интернет-магазин</span></a>
+													</li>
+													<li>
+														<a href="#"><span>сайт на мodx</span></a>
+													</li>
+													<li>
+														<a href="#"><span>перенос на другую cms</span></a>
+													</li>
+													<li>
+														<a href="#"><span>сайт услуги</span></a>
+													</li>
+												</ul>
+											</li>
+											<li class="menu-drop__item">
+												<a class="menu-drop__link" href="#">
+													<span>Таргетированная реклама</span>
+													<span class="menu-drop__arr">
+														<svg>
+															<use
+																href="./assets/img/headerAndFooter/sprite.svg#menu-drop-arr">
+															</use>
+														</svg>
+													</span>
+												</a>
+												<ul>
+													<li>
+														<a href="#"><span>instagram</span></a>
+													</li>
+													<li>
+														<a href="#"><span>vk</span></a>
+													</li>
+													<li>
+														<a href="#"><span>facebook</span></a>
+													</li>
+													<li>
+														<a href="#"><span>одноклассники</span></a>
+													</li>
+												</ul>
+											</li>
+											<li class="menu-drop__item">
+												<a class="menu-drop__link" href="#">
+													<span>Контекстная реклама</span>
+													<span class="menu-drop__arr">
+														<svg>
+															<use
+																href="./assets/img/headerAndFooter/sprite.svg#menu-drop-arr">
+															</use>
+														</svg>
+													</span>
+												</a>
+												<ul>
+													<li>
+														<a href="#"><span>настройка веб-аналитики</span></a>
+													</li>
+													<li>
+														<a href="#"><span>пополнение рекламнных кабинетов</span></a>
+													</li>
+													<li>
+														<a href="#"><span>настройка google merchant centre</span></a>
+													</li>
+													<li>
+														<a href="#"><span>Настройкай яндекс директ</span></a>
+													</li>
+													<li>
+														<a href="#"><span>настройка google рекламы</span></a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li class="menu__item">
+										<a class="menu__link" href="#"><span>наши работы</span></a>
+									</li>
+									<li class="menu__item menu__item--nesting">
+										<a class="menu__link" href="#">
+											<span>студия</span>
+											<span class="menu__item-arr">
+												<svg>
+													<use href="./assets/img/headerAndFooter/sprite.svg#arr-down"></use>
+												</svg>
+											</span>
+										</a>
+										<ul>
+											<li>
+												<a href="#"><span>landing page</span></a>
+											</li>
+											<li>
+												<a href="#"><span>интернет-магазин</span></a>
+											</li>
+											<li>
+												<a href="#"><span>сайт на мodx</span></a>
+											</li>
+											<li>
+												<a href="#"><span>перенос на другую cms</span></a>
+											</li>
+											<li>
+												<a href="#"><span>сайт услуги</span></a>
+											</li>
+										</ul>
+									</li>
+									<li class="menu__item">
+										<a class="menu__link" href="#"><span>блог</span></a>
+									</li>
+									<li class="menu__item">
+										<a class="menu__link" href="#"><span>контакты</span></a>
+									</li>
+								</ul>
+							</nav>
+						</div>
 
 						<a class="header__sci-link sci-link" href="#">
 							<img src="./assets/img/headerAndFooter/insta-ic.png" alt="instagram">
@@ -383,7 +447,8 @@
 											<h1>СОЗДАНИЕ И ПРОДВИЖЕНИЕ <br> САЙТОВ</h1>
 											<h4>ОБЕЩАЕМ ТОЛЬКО ТО, ЧТО МОЖЕМ <br> ВЫПОЛНИТЬ</h4>
 											<div class="main-slider__slide-btns">
-												<a class="btn btn--secondary" href="#">НАЧАТЬ РАБОТУ</a>
+												<a class="btn btn--secondary" href="#"
+													data-button-type="openModal">НАЧАТЬ РАБОТУ</a>
 											</div>
 										</div>
 										<div class="main-slider__slide-img">
@@ -402,7 +467,8 @@
 											<h1>СОЗДАНИЕ И ПРОДВИЖЕНИЕ <br> САЙТОВ</h1>
 											<p>ОБЕЩАЕМ ТОЛЬКО ТО, ЧТО МОЖЕМ <br> ВЫПОЛНИТЬ</p>
 											<div class="main-slider__slide-btns">
-												<a class="btn btn--secondary" href="#">НАЧАТЬ РАБОТУ</a>
+												<a class="btn btn--secondary" href="#"
+													data-button-type="openModal">НАЧАТЬ РАБОТУ</a>
 											</div>
 										</div>
 										<div class="main-slider__slide-img">
@@ -421,7 +487,8 @@
 											<h1>СОЗДАНИЕ И ПРОДВИЖЕНИЕ <br> САЙТОВ</h1>
 											<p>ОБЕЩАЕМ ТОЛЬКО ТО, ЧТО МОЖЕМ <br> ВЫПОЛНИТЬ</p>
 											<div class="main-slider__slide-btns">
-												<a class="btn btn--secondary" href="#">НАЧАТЬ РАБОТУ</a>
+												<a class="btn btn--secondary" href="#"
+													data-button-type="openModal">НАЧАТЬ РАБОТУ</a>
 											</div>
 										</div>
 										<div class="main-slider__slide-img">
@@ -1062,101 +1129,6 @@
 				<section class="services-b section">
 					<div class="services-b__container container">
 						<h2 class="section__title title-1">Услуги</h2>
-						<!-- tabs -->
-						<div class="b-tabs">
-							<!-- nav -->
-							<div class="b-tabs__links">
-								<a class="b-tabs__link active" href="#content-1">seo-продвижение</a>
-								<a class="b-tabs__link" href="#content-2">разработка сайтов</a>
-								<a class="b-tabs__link" href="#content-3">контекстная реклама</a>
-								<a class="b-tabs__link" href="#content-4">таргетированная реклама</a>
-							</div>
-							<!-- content block -->
-							<div class="b-tabs__content">
-								<!-- pane -->
-								<div class="b-tabs__pane active" id="content-1">
-									<div class="b-tabs__pane__inner">
-										<div class="b-tabs__pane-bg"
-											style="background-image: url(./assets/img/pages/index/services-tabs/seo.png);">
-										</div>
-										<h4 class="title-2">seo-продвижение</h4>
-										<p>
-											Компания ООО «Композит групп производство» благодарит за многолетнее и
-											плодотворное
-											сотрудничество всех сотрудников ООО «КристаллВеб», которые ответственно и по
-											всем
-											требованиям качества подошли к каждому нашему проекту.
-										</p>
-										<a class="btn" href="#">Подробнее</a>
-									</div>
-								</div>
-								<!-- pane -->
-								<div class="b-tabs__pane" id="content-2">
-									<div class="b-tabs__pane__inner">
-										<div class="b-tabs__pane-bg"
-											style="background-image: url(./assets/img/pages/index/services-tabs/development.png);">
-										</div>
-										<h4 class="title-2">разработка сайтов</h4>
-										<p>
-											Компания ООО «Композит групп производство» благодарит за многолетнее и
-											плодотворное
-											сотрудничество всех сотрудников ООО «КристаллВеб», которые ответственно и по
-											всем
-											требованиям качества подошли к каждому нашему проекту.
-										</p>
-										<p>
-											Компания ООО «Композит групп производство» благодарит за многолетнее и
-											плодотворное
-											сотрудничество всех сотрудников ООО «КристаллВеб», которые ответственно и по
-											всем
-											требованиям качества подошли к каждому нашему проекту.
-										</p>
-										<a class="btn" href="#">Подробнее</a>
-									</div>
-								</div>
-								<!-- pane -->
-								<div class="b-tabs__pane" id="content-3">
-									<div class="b-tabs__pane__inner">
-										<div class="b-tabs__pane-bg"
-											style="background-image: url(./assets/img/pages/index/services-tabs/contextual.png);">
-										</div>
-										<h4 class="title-2">контекстная реклама</h4>
-										<p>
-											Компания ООО «Композит групп производство» благодарит за многолетнее и
-											плодотворное
-											сотрудничество всех сотрудников ООО «КристаллВеб», которые ответственно и по
-											всем
-											требованиям качества подошли к каждому нашему проекту.
-										</p>
-										<a class="btn" href="#">Подробнее</a>
-									</div>
-								</div>
-								<!-- pane -->
-								<div class="b-tabs__pane" id="content-4">
-									<div class="b-tabs__pane__inner">
-										<div class="b-tabs__pane-bg"
-											style="background-image: url(./assets/img/pages/index/services-tabs/targeted.png);">
-										</div>
-										<h4 class="title-2">таргетированная реклама</h4>
-										<p>
-											Компания ООО «Композит групп производство» благодарит за многолетнее и
-											плодотворное
-											сотрудничество всех сотрудников ООО «КристаллВеб», которые ответственно и по
-											всем
-											требованиям качества подошли к каждому нашему проекту.
-										</p>
-										<p>
-											Компания ООО «Композит групп производство» благодарит за многолетнее и
-											плодотворное
-											сотрудничество всех сотрудников ООО «КристаллВеб», которые ответственно и по
-											всем
-											требованиям качества подошли к каждому нашему проекту.
-										</p>
-										<a class="btn" href="#">Подробнее</a>
-									</div>
-								</div>
-							</div>
-						</div>
 						<!-- bro menu -->
 						<div class="services-menu bro-menu">
 							<ul class="bro-menu__container">
@@ -1619,11 +1591,17 @@
 											почему мы такие классные? и что делать если вы хотите стать нами
 										</a>
 									</h5>
-									<div class="blog-note__metadata">
-										<div class="blog-note__category">
+									<div class="blog-note__metadata note-metadata">
+										<div class="note-metadata__item note-metadata__item--category">
+											<svg>
+												<use xlink:href="./assets/img/icons/sprite.svg#menu-ic"></use>
+											</svg>
 											Полезное
 										</div>
-										<div class="blog-note__date">
+										<div class="note-metadata__item note-metadata__item--date">
+											<svg>
+												<use xlink:href="./assets/img/icons/sprite.svg#clock-ic"></use>
+											</svg>
 											19.05.2021
 										</div>
 									</div>
@@ -1632,6 +1610,10 @@
 										в ТОП и неизменность его позиций, включая самих специалистов Google и Яндекс.
 										Однако, зная принципы работы поисковых систем и имея
 									</p>
+									<!-- blog note bottom -->
+									<div class="blog-note__bottom vt-center flex-wrap">
+										<a class="btn" href="#">Подробнее</a>
+									</div>
 								</div>
 							</article>
 							<!-- blog note -->
@@ -1645,11 +1627,17 @@
 											почему мы такие классные? и что делать если вы хотите стать нами
 										</a>
 									</h5>
-									<div class="blog-note__metadata">
-										<div class="blog-note__category">
+									<div class="blog-note__metadata note-metadata">
+										<div class="note-metadata__item note-metadata__item--category">
+											<svg>
+												<use xlink:href="./assets/img/icons/sprite.svg#menu-ic"></use>
+											</svg>
 											Полезное
 										</div>
-										<div class="blog-note__date">
+										<div class="note-metadata__item note-metadata__item--date">
+											<svg>
+												<use xlink:href="./assets/img/icons/sprite.svg#clock-ic"></use>
+											</svg>
 											19.05.2021
 										</div>
 									</div>
@@ -1658,6 +1646,10 @@
 										в ТОП и неизменность его позиций, включая самих специалистов Google и Яндекс.
 										Однако, зная принципы работы поисковых систем и имея
 									</p>
+									<!-- blog note bottom -->
+									<div class="blog-note__bottom vt-center flex-wrap">
+										<a class="btn" href="#">Подробнее</a>
+									</div>
 								</div>
 							</article>
 						</div>

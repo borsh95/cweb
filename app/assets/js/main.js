@@ -380,6 +380,24 @@ if (isElem('.examples-work-slider')) {
 	})
 }
 
+// if (isElem('header .menu')) {
+// 	const $menu = document.querySelector('header .header__nav');
+// 	const menu = broMenu($menu);
+
+// 	toggleMenu();
+
+// 	window.addEventListener('resize', toggleMenu);
+
+// 	function toggleMenu() {
+// 		if (window.innerWidth < 1025) {
+// 			console.log(23)
+// 			menu.init();
+// 		} else {
+// 			menu.destroy();
+// 		}
+// 	}
+// }
+
 // обработка событий на кнопок сайта
 // которые имеют атрибут data-btn-type
 if (isElem('[data-btn-type]')) {
@@ -428,6 +446,33 @@ if (isElem('.service-tool')) {
 			lastOpenEl = btn;
 		}
 	})
+}
+
+//v-modal
+if (document.querySelector('.v-modal')) {
+	const modalEl = document.querySelector('.v-modal');
+	const body = document.querySelector('body');
+	const typeOpen = "openModal";
+	const typeClose = 'closeModal';
+
+	document.addEventListener('click', function (e) {
+		const btn = e.target.closest('[data-button-type]');
+		if (btn && btn.dataset.buttonType === typeOpen) {
+
+			const scrollBarWidth = window.innerWidth - body.offsetWidth;
+
+			e.preventDefault();
+			modalEl.classList.add('active');
+
+			body.style.overflow = 'hidden';
+			body.style.paddingRight = scrollBarWidth + "px";
+		}
+		else if (e.target.classList.contains('v-modal__inner') || e.target.dataset.buttonType === typeClose) {
+			modalEl.classList.remove('active');
+			body.style.overflow = '';
+			body.style.paddingRight = "";
+		}
+	});
 }
 
 // v-up кнопка вверх
@@ -526,15 +571,15 @@ function broMenu(selector, options) {
 	let $activeUl;
 	let translate = 0;
 
-	for (let submenu of $subMenuList) {
-		const link = submenu.parentElement.firstElementChild;
-
-		_addBtnNext(link);
-	}
-
 	const method = {
 		init() {
 			if (activated) return;
+
+			for (let submenu of $subMenuList) {
+				const link = submenu.parentElement.firstElementChild;
+
+				_addBtnNext(link);
+			}
 
 			$menu.classList.add('bro-menu');
 			for (let submenu of $subMenuList) {
